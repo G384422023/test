@@ -1,4 +1,4 @@
-const traceFilePath = "../formatted_trace_data/experiment_formatted.json";
+const traceFilePath = "./formatted_trace_data/experiment_formatted.json";
 
 //問題設定
 const questionSettings = [
