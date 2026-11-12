@@ -1,0 +1,553 @@
+{
+  "code": [
+    "public class Circular{",
+    "\tpublic static void main(String[] args) {",
+    "\t\tNode l = new Node(1, null);",
+    "        l.next = l;",
+    "\t\tSystem.out.println(\"done\");",
+    "\t}",
+    "}",
+    "",
+    "class Node {",
+    "\tint value;",
+    "\tNode next;",
+    "\tNode(int value, Node next) {",
+    "\t\tthis.value = value;",
+    "\t\tthis.next = next;",
+    "\t}",
+    "};"
+  ],
+  "states": [
+    {
+      "eventIndex": 0,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "Circular",
+        "methodName": "main",
+        "line": 3
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Circular",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 1,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 12
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Circular",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 51
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "0"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 2,
+      "eventKind": "step",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 13
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Circular",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 51
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "0"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 3,
+      "eventKind": "step",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 14
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Circular",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 51
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 4,
+      "eventKind": "step",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 15
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Circular",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 51
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 7,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 15
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Circular",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 51
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 6,
+      "eventKind": "step",
+      "location": {
+        "className": "Circular",
+        "methodName": "main",
+        "line": 3
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Circular",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 7,
+      "eventKind": "step",
+      "location": {
+        "className": "Circular",
+        "methodName": "main",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Circular",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 51
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 8,
+      "eventKind": "step",
+      "location": {
+        "className": "Circular",
+        "methodName": "main",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Circular",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 51
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 51
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 9,
+      "eventKind": "step",
+      "location": {
+        "className": "Circular",
+        "methodName": "main",
+        "line": 6
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Circular",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 51
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 51
+            }
+          }
+        }
+      },
+      "stdout": "done\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 12,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "Circular",
+        "methodName": "main",
+        "line": 6
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Circular",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 51
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 51
+            }
+          }
+        }
+      },
+      "stdout": "done\n",
+      "exception": null
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "code": [
+    "public class MatrixTest{",
+    "    public static void main(String[] args){",
+    "        int[][] as = {{1,2,3}, {4,5,6}};",
+    "        as[0][1] = 20; ",
+    "    }",
+    "};"
+  ],
+  "states": [
+    {
+      "eventIndex": 0,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "MatrixTest",
+        "methodName": "main",
+        "line": 3
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MatrixTest",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 1,
+      "eventKind": "step",
+      "location": {
+        "className": "MatrixTest",
+        "methodName": "main",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MatrixTest",
+          "methodName": "main",
+          "locals": {
+            "as": {
+              "kind": "reference",
+              "type": "int[][]",
+              "id": 50
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[][]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 52
+            },
+            {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 53
+            }
+          ]
+        },
+        "52": {
+          "id": 52,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "1"
+            },
+            {
+              "kind": "value",
+              "value": "2"
+            },
+            {
+              "kind": "value",
+              "value": "3"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "4"
+            },
+            {
+              "kind": "value",
+              "value": "5"
+            },
+            {
+              "kind": "value",
+              "value": "6"
+            }
+          ]
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 2,
+      "eventKind": "step",
+      "location": {
+        "className": "MatrixTest",
+        "methodName": "main",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MatrixTest",
+          "methodName": "main",
+          "locals": {
+            "as": {
+              "kind": "reference",
+              "type": "int[][]",
+              "id": 50
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[][]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 52
+            },
+            {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 53
+            }
+          ]
+        },
+        "52": {
+          "id": 52,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "1"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "3"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "4"
+            },
+            {
+              "kind": "value",
+              "value": "5"
+            },
+            {
+              "kind": "value",
+              "value": "6"
+            }
+          ]
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 5,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "MatrixTest",
+        "methodName": "main",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MatrixTest",
+          "methodName": "main",
+          "locals": {
+            "as": {
+              "kind": "reference",
+              "type": "int[][]",
+              "id": 50
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[][]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 52
+            },
+            {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 53
+            }
+          ]
+        },
+        "52": {
+          "id": 52,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "1"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "3"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "4"
+            },
+            {
+              "kind": "value",
+              "value": "5"
+            },
+            {
+              "kind": "value",
+              "value": "6"
+            }
+          ]
+        }
+      },
+      "stdout": "",
+      "exception": null
+    }
+  ]
+}

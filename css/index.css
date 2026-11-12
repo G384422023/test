@@ -1,0 +1,175 @@
+/* 可視化図を描画するための領域を設定 */
+#jsav_data_container .jsavcanvas{
+    position: relative;
+    min-height: 600px;
+    width: 100%;
+}
+
+/* Javaコードと可視化図を左右に並べる */
+#visualizer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 20px;
+    align-items: start;
+}
+
+/* 各領域の幅を確保し、内部の内容による意図しない拡大を防ぐ */
+#jsav_container,
+#jsav_data_container {
+    min-width: 0;
+}
+
+/*Javaコードの表示設定*/
+#jsav_container .jsavcanvas{
+    max-height: 450px;
+}
+
+#jsav_container .jsavcode .jsavcodeline {
+    transition: background-color 0.8s ease;
+}
+/*次に実行する行*/
+#jsav_container .jsavcode .jsavhighlight {
+    background-color: #ffe6e6 !important;
+}
+/*直前に実行した行*/
+#jsav_container .jsavcode .jsav-prev-line {
+    background-color: #ddebff !important;
+}
+
+/* ステップ移動ボタンを中央揃え */
+#stepButton {
+    text-align: center;
+}
+
+/* 画面が狭い場合はコードと可視化図を上下に並べる */
+@media (max-width: 800px) {
+    #visualizer {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 可視化図が横に長い場合はスクロールできるようにする */
+#jsav_data_container {
+    overflow-x: auto;
+}
+
+/* 可視化図の描画領域 */
+#jsav_data_container .jsavcanvas {
+    min-width: 780px;
+}
+
+/*標準出力と可視化図を縦に配置*/
+#data_column {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/*標準出力・エラー領域*/
+#progOutputs {
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+/*見出し*/
+#outputHeader {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/*標準出力とエラーの表示*/
+#pyStdout,
+#errorOutput {
+    margin: 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+/*出力が長い場合はスクロール*/
+#pyStdout {
+    height: 30px;
+    overflow: auto;
+}
+
+/*エラー表示*/
+#errorOutput {
+    color: #ff002f;
+    margin-top: 6px;
+}
+
+/* 可視化図の文字サイズ */
+#jsav_data_container .jsavlabel,
+#jsav_data_container .jsavvalue,
+#jsav_data_container .jsavindexlabel {
+    font-size: 13px;
+}
+
+/*配列の表示設定
+/* インデックスの位置と文字サイズを設定する */
+#jsav_data_container .jsavhorizontalarray .jsavindexlabel {
+    font-size: 13px;
+    height: 16px;
+    line-height: 16px;
+    bottom: -19px;
+    left: 0;
+    text-align: center;
+}
+/*配列要素のサイズ*/
+#jsav_data_container .jsavarray .jsavindex {
+    width: 40px;
+}
+
+
+
+/*問題を表示する領域*/
+#questionPanel {
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 12px;
+}
+
+/* hidden属性がある場合は非表示にする */
+#questionPanel[hidden] {
+    display: none;
+}
+
+
+/* 削除する対象にマウスを重ねたとき */
+#jsav_data_container .structure-delete-hover {
+    outline: 2px solid #e00000 !important;
+    background-color: #ffe0e0 !important;
+}
+#jsav_data_container svg .structure-delete-hover {
+    stroke: #e00000 !important;
+    outline: none !important;
+    background-color: transparent !important;
+}
+
+/* 解答確認ボタンを強調する */
+#checkAnswerButton {
+    background-color: #1976d2;
+    color: white;
+    border: 2px solid #1565c0;
+}
+#checkAnswerButton:hover {
+    background-color: #1565c0;
+}
+
+/* 選択中の編集モードのボタンを強調する */
+#questionPanel button.selected-answer-mode {
+    border: 2px solid #1565c0;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* 矢印の終点選択で強調する */
+#jsav_data_container .arrow-target-hover {
+    outline: 2px solid #0051ff;
+}

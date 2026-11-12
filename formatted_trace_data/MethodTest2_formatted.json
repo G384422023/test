@@ -1,0 +1,420 @@
+{
+  "code": [
+    "public class MethodTest2 {",
+    "\tprivate static int foo (int n) {",
+    "\t\tint m = n * n;",
+    "\t\tSystem.out.println(\"n = \" + n);",
+    "\t\treturn (m=m+1);",
+    "\t}",
+    "",
+    "\tpublic static void main(String[] args) {",
+    "\t\tSystem.out.println(\"start\");",
+    "\t\tint a = 10;",
+    "\t\tint b = foo(a);",
+    "\t\tSystem.out.println(b);",
+    "\t\tSystem.out.println(\"end\");",
+    "\t}",
+    "}"
+  ],
+  "states": [
+    {
+      "eventIndex": 0,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "MethodTest2",
+        "methodName": "main",
+        "line": 9
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MethodTest2",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 1,
+      "eventKind": "step",
+      "location": {
+        "className": "MethodTest2",
+        "methodName": "main",
+        "line": 10
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MethodTest2",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "start\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 2,
+      "eventKind": "step",
+      "location": {
+        "className": "MethodTest2",
+        "methodName": "main",
+        "line": 11
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MethodTest2",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "value",
+              "value": "10"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "start\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 3,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "MethodTest2",
+        "methodName": "foo",
+        "line": 3
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MethodTest2",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "value",
+              "value": "10"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "MethodTest2",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "10"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "start\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 4,
+      "eventKind": "step",
+      "location": {
+        "className": "MethodTest2",
+        "methodName": "foo",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MethodTest2",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "value",
+              "value": "10"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "MethodTest2",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "10"
+            },
+            "m": {
+              "kind": "value",
+              "value": "100"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "start\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 5,
+      "eventKind": "step",
+      "location": {
+        "className": "MethodTest2",
+        "methodName": "foo",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MethodTest2",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "value",
+              "value": "10"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "MethodTest2",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "10"
+            },
+            "m": {
+              "kind": "value",
+              "value": "100"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "start\nn = 10\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 8,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "MethodTest2",
+        "methodName": "foo",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MethodTest2",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "value",
+              "value": "10"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "MethodTest2",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "10"
+            },
+            "m": {
+              "kind": "value",
+              "value": "100"
+            }
+          },
+          "retval": {
+            "kind": "value",
+            "value": "101"
+          }
+        }
+      ],
+      "heap": {},
+      "stdout": "start\nn = 10\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 7,
+      "eventKind": "step",
+      "location": {
+        "className": "MethodTest2",
+        "methodName": "main",
+        "line": 11
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MethodTest2",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "value",
+              "value": "10"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "start\nn = 10\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 8,
+      "eventKind": "step",
+      "location": {
+        "className": "MethodTest2",
+        "methodName": "main",
+        "line": 12
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MethodTest2",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "value",
+              "value": "101"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "start\nn = 10\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 9,
+      "eventKind": "step",
+      "location": {
+        "className": "MethodTest2",
+        "methodName": "main",
+        "line": 13
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MethodTest2",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "value",
+              "value": "101"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "start\nn = 10\n101\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 10,
+      "eventKind": "step",
+      "location": {
+        "className": "MethodTest2",
+        "methodName": "main",
+        "line": 14
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MethodTest2",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "value",
+              "value": "101"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "start\nn = 10\n101\nend\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 13,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "MethodTest2",
+        "methodName": "main",
+        "line": 14
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MethodTest2",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "value",
+              "value": "101"
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {},
+      "stdout": "start\nn = 10\n101\nend\n",
+      "exception": null
+    }
+  ]
+}

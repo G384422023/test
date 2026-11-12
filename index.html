@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./JSAV/css/JSAV.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Javaプログラム可視化</title>
+</head>
+<body>
+
+    <!--コードと可視化図を表示する領域-->
+    <div id="visualizer">
+
+        <!--Javaコードを表示する領域-->
+        <div id = "jsav_container">
+            <div class="jsavcanvas" ></div>
+            <!--ステップを移動するボタンを表示する領域-->
+            <div id="stepButton">
+                <button id="stepBackFirstButton">最初</button>
+                <button id="stepBackButton">戻る</button>
+                <span id="stepCounter"></span>
+                <button id="stepForwardButton">次へ</button>
+                <button id="stepForwardLastButton">最後</button>
+            </div>
+
+            <div id="questionPanel" hidden>
+                <p id="questionText"></p>
+                <button id="editValueButton" hidden>値の変更</button>
+                <button id="editArrowButton" hidden>参照矢印の変更</button>
+                <button id="deleteButton" hidden>削除</button>
+                <details id="addVariableMenu" class="add-menu">
+                    <summary id="addVariableButton">変数を追加 ▾</summary>
+                    <form id="addVariableForm" class="add-menu-content">
+                        <label>変数名
+                            <input id="addVariableName" type="text" required autocomplete="off">
+                        </label>
+                        <label>追加先
+                            <!-- 開くたびに現在のフレーム・オブジェクトを選択肢にする -->
+                            <select id="addVariableTarget" required></select>
+                        </label>
+                        <!-- 「新しいフレーム」を選択した場合だけ表示する -->
+                        <label id="addVariableMethodRow" hidden>メソッド名
+                            <input id="addVariableMethod" type="text" autocomplete="off">
+                        </label>
+                        <button type="submit">追加</button>
+                    </form>
+                </details>
+                <!-- 配列・クラスインスタンスの追加 -->
+                <details id="addObjectMenu" class="add-menu">
+                    <summary id="addObjectButton">オブジェクトを追加 ▾</summary>
+                    <form id="addObjectForm" class="add-menu-content">
+                        <label>種類
+                            <select id="addObjectKind">
+                                <option value="array">配列</option>
+                                <option value="object">クラスインスタンス</option>
+                            </select>
+                        </label>
+                        <label>型名
+                            <input id="addObjectType" type="text" required autocomplete="off"
+                                placeholder="例：int[], Node">
+                        </label>
+                        <!-- 配列を選択した場合だけ表示する -->
+                        <label id="addObjectLengthRow">要素数
+                            <input id="addObjectLength" type="number" min="0" step="1"
+                                value="1" required>
+                        </label>
+                        <button type="submit">追加</button>
+                    </form>
+                </details>
+                <button id="undoAnswerButton" disabled>1つ戻る</button>
+                <button id="resetAnswerButton" disabled>最初に戻る</button>
+                <button id="skipQuestionButton">スキップ</button>
+                <button id="checkAnswerButton">解答確認</button>
+            </div>
+        </div>
+
+        <!-- プログラムの可視化図と出力を表示する領域 -->
+        <div id="data_column">
+            <div id="progOutputs">
+                <div id="outputHeader">標準出力・エラー</div>
+                <pre id="javaStdout"></pre>
+                <pre id="errorOutput"></pre>
+            </div>
+            <div id="jsav_data_container">
+                <div class="jsavcanvas"></div>
+                </div>
+            </div>
+        </div>
+    
+<!--JSAV -->
+    <script src="./JSAV/lib/jquery.min.js"></script>
+    <script src="./JSAV/lib/jquery-ui.min.js"></script>
+    <script src="./JSAV/lib/jquery.transit.js"></script>
+    <script src="./JSAV/lib/raphael.js"></script>
+    <script src="./JSAV/build/JSAV.js"></script>
+
+<!--プログラム可視化の本体-->
+    <script src="js/Visualizetion.js"></script>
+</body>
+</html>

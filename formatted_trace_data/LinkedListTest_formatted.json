@@ -1,0 +1,521 @@
+{
+  "code": [
+    "import java.util.LinkedList;",
+    "",
+    "public class LinkedListTest {",
+    "\tpublic static void main(String[] args) {",
+    "\t\tLinkedList<Integer> ns = new LinkedList<>();",
+    "\t\tns.add(10);",
+    "\t\tns.add(20);",
+    "\t\tSystem.out.println(ns);",
+    "\t}",
+    "}"
+  ],
+  "states": [
+    {
+      "eventIndex": 0,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "LinkedListTest",
+        "methodName": "main",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "LinkedListTest",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 1,
+      "eventKind": "step",
+      "location": {
+        "className": "LinkedListTest",
+        "methodName": "main",
+        "line": 6
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "LinkedListTest",
+          "methodName": "main",
+          "locals": {
+            "ns": {
+              "kind": "reference",
+              "type": "java.util.LinkedList",
+              "id": 52
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "52": {
+          "id": 52,
+          "type": "java.util.LinkedList",
+          "objectKind": "object",
+          "fields": {
+            "size": {
+              "kind": "value",
+              "value": "0"
+            },
+            "first": {
+              "kind": "null"
+            },
+            "last": {
+              "kind": "null"
+            },
+            "modCount": {
+              "kind": "value",
+              "value": "0"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 2,
+      "eventKind": "step",
+      "location": {
+        "className": "LinkedListTest",
+        "methodName": "main",
+        "line": 7
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "LinkedListTest",
+          "methodName": "main",
+          "locals": {
+            "ns": {
+              "kind": "reference",
+              "type": "java.util.LinkedList",
+              "id": 52
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "52": {
+          "id": 52,
+          "type": "java.util.LinkedList",
+          "objectKind": "object",
+          "fields": {
+            "size": {
+              "kind": "value",
+              "value": "1"
+            },
+            "first": {
+              "kind": "reference",
+              "type": "java.util.LinkedList$Node",
+              "id": 64
+            },
+            "last": {
+              "kind": "reference",
+              "type": "java.util.LinkedList$Node",
+              "id": 64
+            },
+            "modCount": {
+              "kind": "value",
+              "value": "1"
+            }
+          }
+        },
+        "64": {
+          "id": 64,
+          "type": "java.util.LinkedList$Node",
+          "objectKind": "object",
+          "fields": {
+            "item": {
+              "kind": "reference",
+              "type": "java.lang.Integer",
+              "id": 65
+            },
+            "next": {
+              "kind": "null"
+            },
+            "prev": {
+              "kind": "null"
+            }
+          }
+        },
+        "65": {
+          "id": 65,
+          "type": "java.lang.Integer",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "10"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 3,
+      "eventKind": "step",
+      "location": {
+        "className": "LinkedListTest",
+        "methodName": "main",
+        "line": 8
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "LinkedListTest",
+          "methodName": "main",
+          "locals": {
+            "ns": {
+              "kind": "reference",
+              "type": "java.util.LinkedList",
+              "id": 52
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "52": {
+          "id": 52,
+          "type": "java.util.LinkedList",
+          "objectKind": "object",
+          "fields": {
+            "size": {
+              "kind": "value",
+              "value": "2"
+            },
+            "first": {
+              "kind": "reference",
+              "type": "java.util.LinkedList$Node",
+              "id": 64
+            },
+            "last": {
+              "kind": "reference",
+              "type": "java.util.LinkedList$Node",
+              "id": 71
+            },
+            "modCount": {
+              "kind": "value",
+              "value": "2"
+            }
+          }
+        },
+        "64": {
+          "id": 64,
+          "type": "java.util.LinkedList$Node",
+          "objectKind": "object",
+          "fields": {
+            "item": {
+              "kind": "reference",
+              "type": "java.lang.Integer",
+              "id": 65
+            },
+            "next": {
+              "kind": "reference",
+              "type": "java.util.LinkedList$Node",
+              "id": 71
+            },
+            "prev": {
+              "kind": "null"
+            }
+          }
+        },
+        "65": {
+          "id": 65,
+          "type": "java.lang.Integer",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "10"
+            }
+          }
+        },
+        "71": {
+          "id": 71,
+          "type": "java.util.LinkedList$Node",
+          "objectKind": "object",
+          "fields": {
+            "item": {
+              "kind": "reference",
+              "type": "java.lang.Integer",
+              "id": 72
+            },
+            "next": {
+              "kind": "null"
+            },
+            "prev": {
+              "kind": "reference",
+              "type": "java.util.LinkedList$Node",
+              "id": 64
+            }
+          }
+        },
+        "72": {
+          "id": 72,
+          "type": "java.lang.Integer",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "20"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 4,
+      "eventKind": "step",
+      "location": {
+        "className": "LinkedListTest",
+        "methodName": "main",
+        "line": 9
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "LinkedListTest",
+          "methodName": "main",
+          "locals": {
+            "ns": {
+              "kind": "reference",
+              "type": "java.util.LinkedList",
+              "id": 52
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "52": {
+          "id": 52,
+          "type": "java.util.LinkedList",
+          "objectKind": "object",
+          "fields": {
+            "size": {
+              "kind": "value",
+              "value": "2"
+            },
+            "first": {
+              "kind": "reference",
+              "type": "java.util.LinkedList$Node",
+              "id": 64
+            },
+            "last": {
+              "kind": "reference",
+              "type": "java.util.LinkedList$Node",
+              "id": 71
+            },
+            "modCount": {
+              "kind": "value",
+              "value": "2"
+            }
+          }
+        },
+        "64": {
+          "id": 64,
+          "type": "java.util.LinkedList$Node",
+          "objectKind": "object",
+          "fields": {
+            "item": {
+              "kind": "reference",
+              "type": "java.lang.Integer",
+              "id": 65
+            },
+            "next": {
+              "kind": "reference",
+              "type": "java.util.LinkedList$Node",
+              "id": 71
+            },
+            "prev": {
+              "kind": "null"
+            }
+          }
+        },
+        "65": {
+          "id": 65,
+          "type": "java.lang.Integer",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "10"
+            }
+          }
+        },
+        "71": {
+          "id": 71,
+          "type": "java.util.LinkedList$Node",
+          "objectKind": "object",
+          "fields": {
+            "item": {
+              "kind": "reference",
+              "type": "java.lang.Integer",
+              "id": 72
+            },
+            "next": {
+              "kind": "null"
+            },
+            "prev": {
+              "kind": "reference",
+              "type": "java.util.LinkedList$Node",
+              "id": 64
+            }
+          }
+        },
+        "72": {
+          "id": 72,
+          "type": "java.lang.Integer",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "20"
+            }
+          }
+        }
+      },
+      "stdout": "[10, 20]\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 7,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "LinkedListTest",
+        "methodName": "main",
+        "line": 9
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "LinkedListTest",
+          "methodName": "main",
+          "locals": {
+            "ns": {
+              "kind": "reference",
+              "type": "java.util.LinkedList",
+              "id": 52
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "52": {
+          "id": 52,
+          "type": "java.util.LinkedList",
+          "objectKind": "object",
+          "fields": {
+            "size": {
+              "kind": "value",
+              "value": "2"
+            },
+            "first": {
+              "kind": "reference",
+              "type": "java.util.LinkedList$Node",
+              "id": 64
+            },
+            "last": {
+              "kind": "reference",
+              "type": "java.util.LinkedList$Node",
+              "id": 71
+            },
+            "modCount": {
+              "kind": "value",
+              "value": "2"
+            }
+          }
+        },
+        "64": {
+          "id": 64,
+          "type": "java.util.LinkedList$Node",
+          "objectKind": "object",
+          "fields": {
+            "item": {
+              "kind": "reference",
+              "type": "java.lang.Integer",
+              "id": 65
+            },
+            "next": {
+              "kind": "reference",
+              "type": "java.util.LinkedList$Node",
+              "id": 71
+            },
+            "prev": {
+              "kind": "null"
+            }
+          }
+        },
+        "65": {
+          "id": 65,
+          "type": "java.lang.Integer",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "10"
+            }
+          }
+        },
+        "71": {
+          "id": 71,
+          "type": "java.util.LinkedList$Node",
+          "objectKind": "object",
+          "fields": {
+            "item": {
+              "kind": "reference",
+              "type": "java.lang.Integer",
+              "id": 72
+            },
+            "next": {
+              "kind": "null"
+            },
+            "prev": {
+              "kind": "reference",
+              "type": "java.util.LinkedList$Node",
+              "id": 64
+            }
+          }
+        },
+        "72": {
+          "id": 72,
+          "type": "java.lang.Integer",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "20"
+            }
+          }
+        }
+      },
+      "stdout": "[10, 20]\n",
+      "exception": null
+    }
+  ]
+}

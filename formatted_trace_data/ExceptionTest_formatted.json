@@ -1,0 +1,126 @@
+{
+  "code": [
+    "public class ExceptionTest {",
+    "\tpublic static void main(String[] args) throws Exception {",
+    "\t\tException e = new RuntimeException(\"エスケープ文字をメッセージに含めてみる．\"\t\\",
+    "．どうでしょう？\");",
+    "\t\tthrow e;",
+    "\t}",
+    "}"
+  ],
+  "states": [
+    {
+      "eventIndex": 0,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "ExceptionTest",
+        "methodName": "main",
+        "line": 3
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "ExceptionTest",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 1,
+      "eventKind": "step",
+      "location": {
+        "className": "ExceptionTest",
+        "methodName": "main",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "ExceptionTest",
+          "methodName": "main",
+          "locals": {
+            "e": {
+              "kind": "reference",
+              "type": "java.lang.RuntimeException",
+              "id": 50
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "java.lang.RuntimeException",
+          "objectKind": "object",
+          "fields": {
+            "detailMessage": {
+              "kind": "value",
+              "value": "\"エスケープ文字をメッセージに含めてみる．\"\t\\\n．どうでしょう？\""
+            },
+            "depth": {
+              "kind": "value",
+              "value": "1"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 2,
+      "eventKind": "exception",
+      "location": {
+        "className": "ExceptionTest",
+        "methodName": "main",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "ExceptionTest",
+          "methodName": "main",
+          "locals": {
+            "e": {
+              "kind": "reference",
+              "type": "java.lang.RuntimeException",
+              "id": 50
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "java.lang.RuntimeException",
+          "objectKind": "object",
+          "fields": {
+            "detailMessage": {
+              "kind": "value",
+              "value": "\"エスケープ文字をメッセージに含めてみる．\"\t\\\n．どうでしょう？\""
+            },
+            "depth": {
+              "kind": "value",
+              "value": "1"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": {
+        "exceptionType": "java.lang.RuntimeException",
+        "message": "\"エスケープ文字をメッセージに含めてみる．\\\"\\t\\\\\\n．どうでしょう？\""
+      }
+    }
+  ]
+}

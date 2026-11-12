@@ -1,0 +1,5735 @@
+{
+  "code": [
+    "public class Test5 {",
+    "\tpublic static void main(String[] args) {",
+    "\t\tSystem.out.println(\"phase 1\");",
+    "\t\tNode l = new Node(1, null);",
+    "\t\tNode m = new Node(2, null);",
+    "\t\tNode n = new Node(3, null);",
+    "",
+    "\t\tSystem.out.println(\"phase 2\");",
+    "\t\tl.next = m;",
+    "\t\tm.next = n;",
+    "",
+    "\t\tSystem.out.println(\"phase 3\");",
+    "\t\tNode p = new Node(4, null);",
+    "",
+    "\t\tSystem.out.println(\"phase 4\");",
+    "\t\tinsert(m, p);",
+    "",
+    "\t\tSystem.out.println(\"phase 5\");",
+    "\t\tdelete(l);",
+    "",
+    "\t\tSystem.out.println(\"phase 6\");",
+    "\t\tprint(l);",
+    "\t}",
+    "",
+    "\tstatic void insert(Node prev, Node newOne) {",
+    "\t\tnewOne.next = prev.next;",
+    "\t\tprev.next = newOne;",
+    "\t}",
+    "",
+    "\tstatic void delete(Node prev) {",
+    "\t\tprev.next = prev.next.next;",
+    "\t}",
+    "",
+    "\tstatic void print(Node n) {",
+    "\t\tString s = \"\"+n.value;",
+    "\t\twhile (n.next != null) {",
+    "\t\t\tn = n.next;",
+    "\t\t\ts = s + \", \" + n.value;",
+    "\t\t}",
+    "\t\tSystem.out.println(s);",
+    "\t}",
+    "",
+    "}",
+    "",
+    "class Node {",
+    "\tint value;",
+    "\tNode next;",
+    "\tNode(int value, Node next) {",
+    "\t\tthis.value = value;",
+    "\t\tthis.next = next;",
+    "\t}",
+    "}",
+    ""
+  ],
+  "states": [
+    {
+      "eventIndex": 0,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 3
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 1,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 2,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 48
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "0"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 3,
+      "eventKind": "step",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 49
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "0"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 4,
+      "eventKind": "step",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 50
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 5,
+      "eventKind": "step",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 51
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 8,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 51
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 7,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 8,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 9,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 48
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "0"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 10,
+      "eventKind": "step",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 49
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "0"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 11,
+      "eventKind": "step",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 50
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 12,
+      "eventKind": "step",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 51
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 15,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 51
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 14,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 15,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 6
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 16,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 48
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 3,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "0"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 17,
+      "eventKind": "step",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 49
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 3,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "0"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 18,
+      "eventKind": "step",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 50
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 3,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 19,
+      "eventKind": "step",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 51
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 3,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 22,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 51
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 3,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 21,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 6
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 22,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 8
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 23,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 9
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 24,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 10
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 25,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 12
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 26,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 13
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 27,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 48
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 4,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "0"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 28,
+      "eventKind": "step",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 49
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 4,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "0"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 29,
+      "eventKind": "step",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 50
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 4,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 30,
+      "eventKind": "step",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 51
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 4,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 33,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "Node",
+        "methodName": "<init>",
+        "line": 51
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 4,
+          "depth": 2,
+          "className": "Node",
+          "methodName": "<init>",
+          "locals": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "null"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 32,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 13
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 33,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 15
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 34,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 16
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 35,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "Test5",
+        "methodName": "insert",
+        "line": 26
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 5,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "insert",
+          "locals": {
+            "prev": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "newOne": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 36,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "insert",
+        "line": 27
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 5,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "insert",
+          "locals": {
+            "prev": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "newOne": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 37,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "insert",
+        "line": 28
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 5,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "insert",
+          "locals": {
+            "prev": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "newOne": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 40,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "Test5",
+        "methodName": "insert",
+        "line": 28
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 5,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "insert",
+          "locals": {
+            "prev": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "newOne": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 39,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 18
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 40,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 19
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 41,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "Test5",
+        "methodName": "delete",
+        "line": 31
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 6,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "delete",
+          "locals": {
+            "prev": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 42,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "delete",
+        "line": 32
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 6,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "delete",
+          "locals": {
+            "prev": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 45,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "Test5",
+        "methodName": "delete",
+        "line": 32
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 6,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "delete",
+          "locals": {
+            "prev": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 44,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 21
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 45,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 22
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\nphase 6\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 46,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "Test5",
+        "methodName": "print",
+        "line": 35
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 7,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "print",
+          "locals": {
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\nphase 6\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 47,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "print",
+        "line": 36
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 7,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "print",
+          "locals": {
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "s": {
+              "kind": "value",
+              "value": "\"1\""
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\nphase 6\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 48,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "print",
+        "line": 37
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 7,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "print",
+          "locals": {
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "s": {
+              "kind": "value",
+              "value": "\"1\""
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\nphase 6\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 49,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "print",
+        "line": 38
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 7,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "print",
+          "locals": {
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            },
+            "s": {
+              "kind": "value",
+              "value": "\"1\""
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\nphase 6\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 50,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "print",
+        "line": 36
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 7,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "print",
+          "locals": {
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            },
+            "s": {
+              "kind": "value",
+              "value": "\"1, 4\""
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\nphase 6\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 51,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "print",
+        "line": 37
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 7,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "print",
+          "locals": {
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            },
+            "s": {
+              "kind": "value",
+              "value": "\"1, 4\""
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\nphase 6\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 52,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "print",
+        "line": 38
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 7,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "print",
+          "locals": {
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "s": {
+              "kind": "value",
+              "value": "\"1, 4\""
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\nphase 6\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 53,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "print",
+        "line": 36
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 7,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "print",
+          "locals": {
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "s": {
+              "kind": "value",
+              "value": "\"1, 4, 3\""
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\nphase 6\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 54,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "print",
+        "line": 40
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 7,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "print",
+          "locals": {
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "s": {
+              "kind": "value",
+              "value": "\"1, 4, 3\""
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\nphase 6\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 55,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "print",
+        "line": 41
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 7,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "print",
+          "locals": {
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "s": {
+              "kind": "value",
+              "value": "\"1, 4, 3\""
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\nphase 6\n1, 4, 3\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 58,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "Test5",
+        "methodName": "print",
+        "line": 41
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 7,
+          "depth": 2,
+          "className": "Test5",
+          "methodName": "print",
+          "locals": {
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "s": {
+              "kind": "value",
+              "value": "\"1, 4, 3\""
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\nphase 6\n1, 4, 3\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 57,
+      "eventKind": "step",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 23
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\nphase 6\n1, 4, 3\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 60,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "Test5",
+        "methodName": "main",
+        "line": 23
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test5",
+          "methodName": "main",
+          "locals": {
+            "l": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 55
+            },
+            "m": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 57
+            },
+            "n": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            },
+            "p": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "55": {
+          "id": 55,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "1"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "57": {
+          "id": 57,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "2"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 59
+            }
+          }
+        },
+        "58": {
+          "id": 58,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "3"
+            },
+            "next": {
+              "kind": "null"
+            }
+          }
+        },
+        "59": {
+          "id": 59,
+          "type": "Node",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "4"
+            },
+            "next": {
+              "kind": "reference",
+              "type": "Node",
+              "id": 58
+            }
+          }
+        }
+      },
+      "stdout": "phase 1\nphase 2\nphase 3\nphase 4\nphase 5\nphase 6\n1, 4, 3\n",
+      "exception": null
+    }
+  ]
+}

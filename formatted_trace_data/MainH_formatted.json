@@ -1,0 +1,1955 @@
+{
+  "code": [
+    "class H {",
+    "    int k;",
+    "    H h;",
+    "    H(int kk){",
+    "        k = kk;",
+    "        h = null;",
+    "    }",
+    "}",
+    "",
+    "public class MainH{",
+    "    public static void main(String[] args){",
+    "        H h1 = new H(10);",
+    "        H h2 = new H(25);",
+    "        H h3 = new H(49);",
+    "        h1.h = h3;",
+    "        h2.h = h1;",
+    "        h3 = h1;",
+    "        h3.k = h1.h.k;",
+    "    }",
+    "}"
+  ],
+  "states": [
+    {
+      "eventIndex": 0,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "MainH",
+        "methodName": "main",
+        "line": 12
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 1,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "H",
+        "methodName": "<init>",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "H",
+          "methodName": "<init>",
+          "locals": {
+            "kk": {
+              "kind": "value",
+              "value": "10"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "0"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 2,
+      "eventKind": "step",
+      "location": {
+        "className": "H",
+        "methodName": "<init>",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "H",
+          "methodName": "<init>",
+          "locals": {
+            "kk": {
+              "kind": "value",
+              "value": "10"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "0"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 3,
+      "eventKind": "step",
+      "location": {
+        "className": "H",
+        "methodName": "<init>",
+        "line": 6
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "H",
+          "methodName": "<init>",
+          "locals": {
+            "kk": {
+              "kind": "value",
+              "value": "10"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 4,
+      "eventKind": "step",
+      "location": {
+        "className": "H",
+        "methodName": "<init>",
+        "line": 7
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "H",
+          "methodName": "<init>",
+          "locals": {
+            "kk": {
+              "kind": "value",
+              "value": "10"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 7,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "H",
+        "methodName": "<init>",
+        "line": 7
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "H",
+          "methodName": "<init>",
+          "locals": {
+            "kk": {
+              "kind": "value",
+              "value": "10"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 6,
+      "eventKind": "step",
+      "location": {
+        "className": "MainH",
+        "methodName": "main",
+        "line": 12
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 7,
+      "eventKind": "step",
+      "location": {
+        "className": "MainH",
+        "methodName": "main",
+        "line": 13
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 8,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "H",
+        "methodName": "<init>",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 2,
+          "className": "H",
+          "methodName": "<init>",
+          "locals": {
+            "kk": {
+              "kind": "value",
+              "value": "25"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "0"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 9,
+      "eventKind": "step",
+      "location": {
+        "className": "H",
+        "methodName": "<init>",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 2,
+          "className": "H",
+          "methodName": "<init>",
+          "locals": {
+            "kk": {
+              "kind": "value",
+              "value": "25"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "0"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 10,
+      "eventKind": "step",
+      "location": {
+        "className": "H",
+        "methodName": "<init>",
+        "line": 6
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 2,
+          "className": "H",
+          "methodName": "<init>",
+          "locals": {
+            "kk": {
+              "kind": "value",
+              "value": "25"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 11,
+      "eventKind": "step",
+      "location": {
+        "className": "H",
+        "methodName": "<init>",
+        "line": 7
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 2,
+          "className": "H",
+          "methodName": "<init>",
+          "locals": {
+            "kk": {
+              "kind": "value",
+              "value": "25"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 14,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "H",
+        "methodName": "<init>",
+        "line": 7
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 2,
+          "className": "H",
+          "methodName": "<init>",
+          "locals": {
+            "kk": {
+              "kind": "value",
+              "value": "25"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 13,
+      "eventKind": "step",
+      "location": {
+        "className": "MainH",
+        "methodName": "main",
+        "line": 13
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 14,
+      "eventKind": "step",
+      "location": {
+        "className": "MainH",
+        "methodName": "main",
+        "line": 14
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            },
+            "h2": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 15,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "H",
+        "methodName": "<init>",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            },
+            "h2": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 3,
+          "depth": 2,
+          "className": "H",
+          "methodName": "<init>",
+          "locals": {
+            "kk": {
+              "kind": "value",
+              "value": "49"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "H",
+              "id": 54
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "54": {
+          "id": 54,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "0"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 16,
+      "eventKind": "step",
+      "location": {
+        "className": "H",
+        "methodName": "<init>",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            },
+            "h2": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 3,
+          "depth": 2,
+          "className": "H",
+          "methodName": "<init>",
+          "locals": {
+            "kk": {
+              "kind": "value",
+              "value": "49"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "H",
+              "id": 54
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "54": {
+          "id": 54,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "0"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 17,
+      "eventKind": "step",
+      "location": {
+        "className": "H",
+        "methodName": "<init>",
+        "line": 6
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            },
+            "h2": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 3,
+          "depth": 2,
+          "className": "H",
+          "methodName": "<init>",
+          "locals": {
+            "kk": {
+              "kind": "value",
+              "value": "49"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "H",
+              "id": 54
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "54": {
+          "id": 54,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "49"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 18,
+      "eventKind": "step",
+      "location": {
+        "className": "H",
+        "methodName": "<init>",
+        "line": 7
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            },
+            "h2": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 3,
+          "depth": 2,
+          "className": "H",
+          "methodName": "<init>",
+          "locals": {
+            "kk": {
+              "kind": "value",
+              "value": "49"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "H",
+              "id": 54
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "54": {
+          "id": 54,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "49"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 21,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "H",
+        "methodName": "<init>",
+        "line": 7
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            },
+            "h2": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 3,
+          "depth": 2,
+          "className": "H",
+          "methodName": "<init>",
+          "locals": {
+            "kk": {
+              "kind": "value",
+              "value": "49"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "H",
+              "id": 54
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "54": {
+          "id": 54,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "49"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 20,
+      "eventKind": "step",
+      "location": {
+        "className": "MainH",
+        "methodName": "main",
+        "line": 14
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            },
+            "h2": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "54": {
+          "id": 54,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "49"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 21,
+      "eventKind": "step",
+      "location": {
+        "className": "MainH",
+        "methodName": "main",
+        "line": 15
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            },
+            "h2": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            },
+            "h3": {
+              "kind": "reference",
+              "type": "H",
+              "id": 54
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "54": {
+          "id": 54,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "49"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 22,
+      "eventKind": "step",
+      "location": {
+        "className": "MainH",
+        "methodName": "main",
+        "line": 16
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            },
+            "h2": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            },
+            "h3": {
+              "kind": "reference",
+              "type": "H",
+              "id": 54
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "reference",
+              "type": "H",
+              "id": 54
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        },
+        "54": {
+          "id": 54,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "49"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 23,
+      "eventKind": "step",
+      "location": {
+        "className": "MainH",
+        "methodName": "main",
+        "line": 17
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            },
+            "h2": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            },
+            "h3": {
+              "kind": "reference",
+              "type": "H",
+              "id": 54
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "reference",
+              "type": "H",
+              "id": 54
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          }
+        },
+        "54": {
+          "id": 54,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "49"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 24,
+      "eventKind": "step",
+      "location": {
+        "className": "MainH",
+        "methodName": "main",
+        "line": 18
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            },
+            "h2": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            },
+            "h3": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "10"
+            },
+            "h": {
+              "kind": "reference",
+              "type": "H",
+              "id": 54
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          }
+        },
+        "54": {
+          "id": 54,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "49"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 25,
+      "eventKind": "step",
+      "location": {
+        "className": "MainH",
+        "methodName": "main",
+        "line": 19
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            },
+            "h2": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            },
+            "h3": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "49"
+            },
+            "h": {
+              "kind": "reference",
+              "type": "H",
+              "id": 54
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          }
+        },
+        "54": {
+          "id": 54,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "49"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 28,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "MainH",
+        "methodName": "main",
+        "line": 19
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "MainH",
+          "methodName": "main",
+          "locals": {
+            "h1": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            },
+            "h2": {
+              "kind": "reference",
+              "type": "H",
+              "id": 53
+            },
+            "h3": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "51": {
+          "id": 51,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "49"
+            },
+            "h": {
+              "kind": "reference",
+              "type": "H",
+              "id": 54
+            }
+          }
+        },
+        "53": {
+          "id": 53,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "25"
+            },
+            "h": {
+              "kind": "reference",
+              "type": "H",
+              "id": 51
+            }
+          }
+        },
+        "54": {
+          "id": 54,
+          "type": "H",
+          "objectKind": "object",
+          "fields": {
+            "k": {
+              "kind": "value",
+              "value": "49"
+            },
+            "h": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    }
+  ]
+}

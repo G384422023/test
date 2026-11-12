@@ -1,0 +1,487 @@
+{
+  "code": [
+    "public class Test1 {",
+    "\tpublic static void main(String[] args) {",
+    "\t\tint[] as = {1,2,3};",
+    "\t\tint[] bs = {4,5,6,7};",
+    "\t\tint[] cs = as;",
+    "\t\tas[1] = 10;",
+    "\t\tSystem.out.println(cs[1]);",
+    "\t}",
+    "}"
+  ],
+  "states": [
+    {
+      "eventIndex": 0,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "Test1",
+        "methodName": "main",
+        "line": 3
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test1",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 1,
+      "eventKind": "step",
+      "location": {
+        "className": "Test1",
+        "methodName": "main",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test1",
+          "methodName": "main",
+          "locals": {
+            "as": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "1"
+            },
+            {
+              "kind": "value",
+              "value": "2"
+            },
+            {
+              "kind": "value",
+              "value": "3"
+            }
+          ]
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 2,
+      "eventKind": "step",
+      "location": {
+        "className": "Test1",
+        "methodName": "main",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test1",
+          "methodName": "main",
+          "locals": {
+            "as": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "bs": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 52
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "1"
+            },
+            {
+              "kind": "value",
+              "value": "2"
+            },
+            {
+              "kind": "value",
+              "value": "3"
+            }
+          ]
+        },
+        "52": {
+          "id": 52,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "4"
+            },
+            {
+              "kind": "value",
+              "value": "5"
+            },
+            {
+              "kind": "value",
+              "value": "6"
+            },
+            {
+              "kind": "value",
+              "value": "7"
+            }
+          ]
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 3,
+      "eventKind": "step",
+      "location": {
+        "className": "Test1",
+        "methodName": "main",
+        "line": 6
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test1",
+          "methodName": "main",
+          "locals": {
+            "as": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "bs": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 52
+            },
+            "cs": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "1"
+            },
+            {
+              "kind": "value",
+              "value": "2"
+            },
+            {
+              "kind": "value",
+              "value": "3"
+            }
+          ]
+        },
+        "52": {
+          "id": 52,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "4"
+            },
+            {
+              "kind": "value",
+              "value": "5"
+            },
+            {
+              "kind": "value",
+              "value": "6"
+            },
+            {
+              "kind": "value",
+              "value": "7"
+            }
+          ]
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 4,
+      "eventKind": "step",
+      "location": {
+        "className": "Test1",
+        "methodName": "main",
+        "line": 7
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test1",
+          "methodName": "main",
+          "locals": {
+            "as": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "bs": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 52
+            },
+            "cs": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "1"
+            },
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "3"
+            }
+          ]
+        },
+        "52": {
+          "id": 52,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "4"
+            },
+            {
+              "kind": "value",
+              "value": "5"
+            },
+            {
+              "kind": "value",
+              "value": "6"
+            },
+            {
+              "kind": "value",
+              "value": "7"
+            }
+          ]
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 5,
+      "eventKind": "step",
+      "location": {
+        "className": "Test1",
+        "methodName": "main",
+        "line": 8
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test1",
+          "methodName": "main",
+          "locals": {
+            "as": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "bs": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 52
+            },
+            "cs": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "1"
+            },
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "3"
+            }
+          ]
+        },
+        "52": {
+          "id": 52,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "4"
+            },
+            {
+              "kind": "value",
+              "value": "5"
+            },
+            {
+              "kind": "value",
+              "value": "6"
+            },
+            {
+              "kind": "value",
+              "value": "7"
+            }
+          ]
+        }
+      },
+      "stdout": "10\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 8,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "Test1",
+        "methodName": "main",
+        "line": 8
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "Test1",
+          "methodName": "main",
+          "locals": {
+            "as": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "bs": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 52
+            },
+            "cs": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "1"
+            },
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "3"
+            }
+          ]
+        },
+        "52": {
+          "id": 52,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "4"
+            },
+            {
+              "kind": "value",
+              "value": "5"
+            },
+            {
+              "kind": "value",
+              "value": "6"
+            },
+            {
+              "kind": "value",
+              "value": "7"
+            }
+          ]
+        }
+      },
+      "stdout": "10\n",
+      "exception": null
+    }
+  ]
+}

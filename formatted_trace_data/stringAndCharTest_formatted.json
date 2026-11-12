@@ -1,0 +1,157 @@
+{
+  "code": [
+    "public class stringAndCharTest {",
+    "    public static void main(String[] args) {",
+    "        String s  = \"abc\";",
+    "        char c = 'a';",
+    "        System.out.println(s+c);",
+    "    }",
+    "}"
+  ],
+  "states": [
+    {
+      "eventIndex": 0,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "stringAndCharTest",
+        "methodName": "main",
+        "line": 3
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "stringAndCharTest",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 1,
+      "eventKind": "step",
+      "location": {
+        "className": "stringAndCharTest",
+        "methodName": "main",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "stringAndCharTest",
+          "methodName": "main",
+          "locals": {
+            "s": {
+              "kind": "value",
+              "value": "\"abc\""
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 2,
+      "eventKind": "step",
+      "location": {
+        "className": "stringAndCharTest",
+        "methodName": "main",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "stringAndCharTest",
+          "methodName": "main",
+          "locals": {
+            "s": {
+              "kind": "value",
+              "value": "\"abc\""
+            },
+            "c": {
+              "kind": "value",
+              "value": "a"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 3,
+      "eventKind": "step",
+      "location": {
+        "className": "stringAndCharTest",
+        "methodName": "main",
+        "line": 6
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "stringAndCharTest",
+          "methodName": "main",
+          "locals": {
+            "s": {
+              "kind": "value",
+              "value": "\"abc\""
+            },
+            "c": {
+              "kind": "value",
+              "value": "a"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "abca\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 6,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "stringAndCharTest",
+        "methodName": "main",
+        "line": 6
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "stringAndCharTest",
+          "methodName": "main",
+          "locals": {
+            "s": {
+              "kind": "value",
+              "value": "\"abc\""
+            },
+            "c": {
+              "kind": "value",
+              "value": "a"
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {},
+      "stdout": "abca\n",
+      "exception": null
+    }
+  ]
+}

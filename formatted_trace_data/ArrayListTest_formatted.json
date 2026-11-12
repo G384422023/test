@@ -1,0 +1,554 @@
+{
+  "code": [
+    "import java.util.ArrayList;",
+    "",
+    "public class ArrayListTest {",
+    "\tpublic static void main(String[] args) {",
+    "\t\tArrayList<Integer> ns = new ArrayList<>();",
+    "\t\tns.add(10);",
+    "\t\tns.add(20);",
+    "\t\tSystem.out.println(ns);",
+    "\t}",
+    "}"
+  ],
+  "states": [
+    {
+      "eventIndex": 0,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "ArrayListTest",
+        "methodName": "main",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "ArrayListTest",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 1,
+      "eventKind": "step",
+      "location": {
+        "className": "ArrayListTest",
+        "methodName": "main",
+        "line": 6
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "ArrayListTest",
+          "methodName": "main",
+          "locals": {
+            "ns": {
+              "kind": "reference",
+              "type": "java.util.ArrayList",
+              "id": 50
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "java.util.ArrayList",
+          "objectKind": "object",
+          "fields": {
+            "elementData": {
+              "kind": "reference",
+              "type": "java.lang.Object[]",
+              "id": 61
+            },
+            "size": {
+              "kind": "value",
+              "value": "0"
+            },
+            "modCount": {
+              "kind": "value",
+              "value": "0"
+            }
+          }
+        },
+        "61": {
+          "id": 61,
+          "type": "java.lang.Object[]",
+          "objectKind": "array",
+          "elements": []
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 2,
+      "eventKind": "step",
+      "location": {
+        "className": "ArrayListTest",
+        "methodName": "main",
+        "line": 7
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "ArrayListTest",
+          "methodName": "main",
+          "locals": {
+            "ns": {
+              "kind": "reference",
+              "type": "java.util.ArrayList",
+              "id": 50
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "java.util.ArrayList",
+          "objectKind": "object",
+          "fields": {
+            "elementData": {
+              "kind": "reference",
+              "type": "java.lang.Object[]",
+              "id": 63
+            },
+            "size": {
+              "kind": "value",
+              "value": "1"
+            },
+            "modCount": {
+              "kind": "value",
+              "value": "1"
+            }
+          }
+        },
+        "61": {
+          "id": 61,
+          "type": "java.lang.Object[]",
+          "objectKind": "array",
+          "elements": []
+        },
+        "63": {
+          "id": 63,
+          "type": "java.lang.Object[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "reference",
+              "type": "java.lang.Integer",
+              "id": 64
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            }
+          ]
+        },
+        "64": {
+          "id": 64,
+          "type": "java.lang.Integer",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "10"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 3,
+      "eventKind": "step",
+      "location": {
+        "className": "ArrayListTest",
+        "methodName": "main",
+        "line": 8
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "ArrayListTest",
+          "methodName": "main",
+          "locals": {
+            "ns": {
+              "kind": "reference",
+              "type": "java.util.ArrayList",
+              "id": 50
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "java.util.ArrayList",
+          "objectKind": "object",
+          "fields": {
+            "elementData": {
+              "kind": "reference",
+              "type": "java.lang.Object[]",
+              "id": 63
+            },
+            "size": {
+              "kind": "value",
+              "value": "2"
+            },
+            "modCount": {
+              "kind": "value",
+              "value": "2"
+            }
+          }
+        },
+        "61": {
+          "id": 61,
+          "type": "java.lang.Object[]",
+          "objectKind": "array",
+          "elements": []
+        },
+        "63": {
+          "id": 63,
+          "type": "java.lang.Object[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "reference",
+              "type": "java.lang.Integer",
+              "id": 64
+            },
+            {
+              "kind": "reference",
+              "type": "java.lang.Integer",
+              "id": 70
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            }
+          ]
+        },
+        "64": {
+          "id": 64,
+          "type": "java.lang.Integer",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "10"
+            }
+          }
+        },
+        "70": {
+          "id": 70,
+          "type": "java.lang.Integer",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "20"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 4,
+      "eventKind": "step",
+      "location": {
+        "className": "ArrayListTest",
+        "methodName": "main",
+        "line": 9
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "ArrayListTest",
+          "methodName": "main",
+          "locals": {
+            "ns": {
+              "kind": "reference",
+              "type": "java.util.ArrayList",
+              "id": 50
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "java.util.ArrayList",
+          "objectKind": "object",
+          "fields": {
+            "elementData": {
+              "kind": "reference",
+              "type": "java.lang.Object[]",
+              "id": 63
+            },
+            "size": {
+              "kind": "value",
+              "value": "2"
+            },
+            "modCount": {
+              "kind": "value",
+              "value": "2"
+            }
+          }
+        },
+        "61": {
+          "id": 61,
+          "type": "java.lang.Object[]",
+          "objectKind": "array",
+          "elements": []
+        },
+        "63": {
+          "id": 63,
+          "type": "java.lang.Object[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "reference",
+              "type": "java.lang.Integer",
+              "id": 64
+            },
+            {
+              "kind": "reference",
+              "type": "java.lang.Integer",
+              "id": 70
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            }
+          ]
+        },
+        "64": {
+          "id": 64,
+          "type": "java.lang.Integer",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "10"
+            }
+          }
+        },
+        "70": {
+          "id": 70,
+          "type": "java.lang.Integer",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "20"
+            }
+          }
+        }
+      },
+      "stdout": "[10, 20]\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 7,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "ArrayListTest",
+        "methodName": "main",
+        "line": 9
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "ArrayListTest",
+          "methodName": "main",
+          "locals": {
+            "ns": {
+              "kind": "reference",
+              "type": "java.util.ArrayList",
+              "id": 50
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "java.util.ArrayList",
+          "objectKind": "object",
+          "fields": {
+            "elementData": {
+              "kind": "reference",
+              "type": "java.lang.Object[]",
+              "id": 63
+            },
+            "size": {
+              "kind": "value",
+              "value": "2"
+            },
+            "modCount": {
+              "kind": "value",
+              "value": "2"
+            }
+          }
+        },
+        "61": {
+          "id": 61,
+          "type": "java.lang.Object[]",
+          "objectKind": "array",
+          "elements": []
+        },
+        "63": {
+          "id": 63,
+          "type": "java.lang.Object[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "reference",
+              "type": "java.lang.Integer",
+              "id": 64
+            },
+            {
+              "kind": "reference",
+              "type": "java.lang.Integer",
+              "id": 70
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            },
+            {
+              "kind": "null"
+            }
+          ]
+        },
+        "64": {
+          "id": 64,
+          "type": "java.lang.Integer",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "10"
+            }
+          }
+        },
+        "70": {
+          "id": 70,
+          "type": "java.lang.Integer",
+          "objectKind": "object",
+          "fields": {
+            "value": {
+              "kind": "value",
+              "value": "20"
+            }
+          }
+        }
+      },
+      "stdout": "[10, 20]\n",
+      "exception": null
+    }
+  ]
+}

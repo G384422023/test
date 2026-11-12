@@ -1,0 +1,568 @@
+{
+  "code": [
+    "public class saiki{",
+    "    public static void main(String[] args){",
+    "        int x = 1;",
+    "        foo(x);",
+    "    }",
+    "",
+    "    static int foo(int n){",
+    "        n++",
+    "        if(n<3)foo(n)",
+    "        return n;",
+    "    }",
+    "}"
+  ],
+  "states": [
+    {
+      "eventIndex": 0,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "saiki",
+        "methodName": "main",
+        "line": 3
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "saiki",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 1,
+      "eventKind": "step",
+      "location": {
+        "className": "saiki",
+        "methodName": "main",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "saiki",
+          "methodName": "main",
+          "locals": {
+            "x": {
+              "kind": "value",
+              "value": "1"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 2,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "saiki",
+        "methodName": "foo",
+        "line": 8
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "saiki",
+          "methodName": "main",
+          "locals": {
+            "x": {
+              "kind": "value",
+              "value": "1"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "saiki",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "1"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 3,
+      "eventKind": "step",
+      "location": {
+        "className": "saiki",
+        "methodName": "foo",
+        "line": 9
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "saiki",
+          "methodName": "main",
+          "locals": {
+            "x": {
+              "kind": "value",
+              "value": "1"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "saiki",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "2"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 4,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "saiki",
+        "methodName": "foo",
+        "line": 8
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "saiki",
+          "methodName": "main",
+          "locals": {
+            "x": {
+              "kind": "value",
+              "value": "1"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "saiki",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "2"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 3,
+          "className": "saiki",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "2"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 5,
+      "eventKind": "step",
+      "location": {
+        "className": "saiki",
+        "methodName": "foo",
+        "line": 9
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "saiki",
+          "methodName": "main",
+          "locals": {
+            "x": {
+              "kind": "value",
+              "value": "1"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "saiki",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "2"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 3,
+          "className": "saiki",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "3"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 6,
+      "eventKind": "step",
+      "location": {
+        "className": "saiki",
+        "methodName": "foo",
+        "line": 10
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "saiki",
+          "methodName": "main",
+          "locals": {
+            "x": {
+              "kind": "value",
+              "value": "1"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "saiki",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "2"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 3,
+          "className": "saiki",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "3"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 9,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "saiki",
+        "methodName": "foo",
+        "line": 10
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "saiki",
+          "methodName": "main",
+          "locals": {
+            "x": {
+              "kind": "value",
+              "value": "1"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "saiki",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "2"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 3,
+          "className": "saiki",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "3"
+            }
+          },
+          "retval": {
+            "kind": "value",
+            "value": "3"
+          }
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 8,
+      "eventKind": "step",
+      "location": {
+        "className": "saiki",
+        "methodName": "foo",
+        "line": 9
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "saiki",
+          "methodName": "main",
+          "locals": {
+            "x": {
+              "kind": "value",
+              "value": "1"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "saiki",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "2"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 9,
+      "eventKind": "step",
+      "location": {
+        "className": "saiki",
+        "methodName": "foo",
+        "line": 10
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "saiki",
+          "methodName": "main",
+          "locals": {
+            "x": {
+              "kind": "value",
+              "value": "1"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "saiki",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "2"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 12,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "saiki",
+        "methodName": "foo",
+        "line": 10
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "saiki",
+          "methodName": "main",
+          "locals": {
+            "x": {
+              "kind": "value",
+              "value": "1"
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "saiki",
+          "methodName": "foo",
+          "locals": {
+            "n": {
+              "kind": "value",
+              "value": "2"
+            }
+          },
+          "retval": {
+            "kind": "value",
+            "value": "2"
+          }
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 11,
+      "eventKind": "step",
+      "location": {
+        "className": "saiki",
+        "methodName": "main",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "saiki",
+          "methodName": "main",
+          "locals": {
+            "x": {
+              "kind": "value",
+              "value": "1"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 12,
+      "eventKind": "step",
+      "location": {
+        "className": "saiki",
+        "methodName": "main",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "saiki",
+          "methodName": "main",
+          "locals": {
+            "x": {
+              "kind": "value",
+              "value": "1"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 15,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "saiki",
+        "methodName": "main",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "saiki",
+          "methodName": "main",
+          "locals": {
+            "x": {
+              "kind": "value",
+              "value": "1"
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    }
+  ]
+}

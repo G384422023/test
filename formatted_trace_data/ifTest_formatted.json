@@ -1,0 +1,224 @@
+{
+  "code": [
+    "public class ifTest {",
+    "    public static void main(String[] args) {",
+    "        int a = 10;",
+    "        int b = 20;",
+    "        System.out.println(\"a: \" + a + \"b: \" + b);",
+    "        if (a < b) {",
+    "            System.out.println(\"aはbより小さい\");",
+    "        } else {",
+    "            System.out.println(\"aはbと等しいか，bより大きい\");",
+    "        }",
+    "    }",
+    "}"
+  ],
+  "states": [
+    {
+      "eventIndex": 0,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "ifTest",
+        "methodName": "main",
+        "line": 3
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "ifTest",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 1,
+      "eventKind": "step",
+      "location": {
+        "className": "ifTest",
+        "methodName": "main",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "ifTest",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "value",
+              "value": "10"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 2,
+      "eventKind": "step",
+      "location": {
+        "className": "ifTest",
+        "methodName": "main",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "ifTest",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "value",
+              "value": "20"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 3,
+      "eventKind": "step",
+      "location": {
+        "className": "ifTest",
+        "methodName": "main",
+        "line": 6
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "ifTest",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "value",
+              "value": "20"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "a: 10\n b: 20\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 4,
+      "eventKind": "step",
+      "location": {
+        "className": "ifTest",
+        "methodName": "main",
+        "line": 7
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "ifTest",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "value",
+              "value": "20"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "a: 10\n b: 20\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 5,
+      "eventKind": "step",
+      "location": {
+        "className": "ifTest",
+        "methodName": "main",
+        "line": 11
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "ifTest",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "value",
+              "value": "20"
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "a: 10\n b: 20\naはbより小さい\n",
+      "exception": null
+    },
+    {
+      "eventIndex": 8,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "ifTest",
+        "methodName": "main",
+        "line": 11
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "ifTest",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "value",
+              "value": "20"
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {},
+      "stdout": "a: 10\n b: 20\naはbより小さい\n",
+      "exception": null
+    }
+  ]
+}
