@@ -1,26 +1,49 @@
-//const traceFilePath = "../formatted_trace_data/MethodTest2_formatted.json";
-//const traceFilePath = "../formatted_trace_data/Test1_formatted.json";
-//const traceFilePath = "../formatted_trace_data/Test4____formatted.json";
-//const traceFilePath = "../formatted_trace_data/ExceptionTest_formatted.json";
-const traceFilePath = "./formatted_trace_data/MainH_formatted.json";
-//const traceFilePath = "../formatted_trace_data/saiki_formatted.json";
-//const traceFilePath = "../formatted_trace_data/ifTest_formatted.json";
-//const traceFilePath = "../formatted_trace_data/stringAndCharTest_formatted.json";
+const traceFilePath = "../formatted_trace_data/experiment_formatted.json";
 
 //問題設定
 const questionSettings = [
     {
-        id:"q2",//問題ID
-        startStep: 22,//問題の開始ステップ番号
-        endStep: 23,//問題の終了ステップ番号
-        text: "15行目実行後の状態を図示せよ",//問題文
+        id:"q1",//問題ID
+        startStep: 1,//問題の開始ステップ番号
+        endStep: 2,//問題の終了ステップ番号
+        text: "３行目を実行後の状態を図示せよ",//問題文
         howToAnswer:["arrow","value","structure"],//解答方法
         feedback: ""//不正解の時に表示するフィードバック
         //正誤判定の表示をするか
         //何ステップ目から可視化を開始するか
         //ログを収集するか
+    },{
+        id:"q2",//問題ID
+        startStep: 2,//問題の開始ステップ番号
+        endStep: 9,//問題の終了ステップ番号
+        text: "4行目を実行後の状態を図示せよ",//問題文
+        howToAnswer:["arrow","value","structure"],//解答方法
+        feedback: ""//不正解の時に表示するフィードバック
+        //正誤判定の表示をするか
+        //何ステップ目から可視化を開始するか
+        //ログを収集するか
+    },{
+        id:"q3",//問題ID
+        startStep: 23,//問題の開始ステップ番号
+        endStep: 24,//問題の終了ステップ番号
+        text: "7行目を実行後の状態を図示せよ",//問題文
+        howToAnswer:["arrow"],//解答方法
+        feedback: ""//不正解の時に表示するフィードバック
+        //正誤判定の表示をするか
+        //何ステップ目から可視化を開始するか
+        //ログを収集するか
+    },{
+        id:"q4",//問題ID
+        startStep: 24,//問題の開始ステップ番号
+        endStep: 25,//問題の終了ステップ番号
+        text: "8行目を実行後の状態を図示せよ",//問題文
+        howToAnswer:["arrow"],//解答方法
+        feedback: ""//不正解の時に表示するフィードバック
+        //正誤判定の表示をするか
+        //何ステップ目から可視化を開始するか
+        //ログを収集するか
     },
-]
+];
 
 //トレースを返す関数
 async function loadTrace(filePath){
