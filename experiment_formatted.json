@@ -1,0 +1,2411 @@
+{
+  "code": [
+    "public class experiment {",
+    "    public static void main(String[] args) {",
+    "        int[] a = {10, 20, 30};",
+    "        Box b1 = new Box(a[0]);",
+    "        Box b2 = new Box(a[1]);",
+    "        Box b3 = new Box(a[2]);",
+    "        b1.b = b2;",
+    "        b2 = b3;",
+    "    }",
+    "}",
+    "",
+    "class Box {",
+    "    int v;",
+    "    Box b;",
+    "    ",
+    "    Box(int v) {",
+    "        this.v = v;",
+    "        this.b = null;",
+    "    }",
+    "}"
+  ],
+  "states": [
+    {
+      "eventIndex": 0,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "experiment",
+        "methodName": "main",
+        "line": 3
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {},
+          "retval": null
+        }
+      ],
+      "heap": {},
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 1,
+      "eventKind": "step",
+      "location": {
+        "className": "experiment",
+        "methodName": "main",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 2,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "Box",
+        "methodName": "<init>",
+        "line": 16
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "Box",
+          "methodName": "<init>",
+          "locals": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "0"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 3,
+      "eventKind": "step",
+      "location": {
+        "className": "Box",
+        "methodName": "<init>",
+        "line": 17
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "Box",
+          "methodName": "<init>",
+          "locals": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "0"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 4,
+      "eventKind": "step",
+      "location": {
+        "className": "Box",
+        "methodName": "<init>",
+        "line": 18
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "Box",
+          "methodName": "<init>",
+          "locals": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 5,
+      "eventKind": "step",
+      "location": {
+        "className": "Box",
+        "methodName": "<init>",
+        "line": 19
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "Box",
+          "methodName": "<init>",
+          "locals": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 8,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "Box",
+        "methodName": "<init>",
+        "line": 19
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 1,
+          "depth": 2,
+          "className": "Box",
+          "methodName": "<init>",
+          "locals": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 7,
+      "eventKind": "step",
+      "location": {
+        "className": "experiment",
+        "methodName": "main",
+        "line": 4
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 8,
+      "eventKind": "step",
+      "location": {
+        "className": "experiment",
+        "methodName": "main",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 9,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "Box",
+        "methodName": "<init>",
+        "line": 16
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 2,
+          "className": "Box",
+          "methodName": "<init>",
+          "locals": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "0"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 10,
+      "eventKind": "step",
+      "location": {
+        "className": "Box",
+        "methodName": "<init>",
+        "line": 17
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 2,
+          "className": "Box",
+          "methodName": "<init>",
+          "locals": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "0"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 11,
+      "eventKind": "step",
+      "location": {
+        "className": "Box",
+        "methodName": "<init>",
+        "line": 18
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 2,
+          "className": "Box",
+          "methodName": "<init>",
+          "locals": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 12,
+      "eventKind": "step",
+      "location": {
+        "className": "Box",
+        "methodName": "<init>",
+        "line": 19
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 2,
+          "className": "Box",
+          "methodName": "<init>",
+          "locals": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 15,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "Box",
+        "methodName": "<init>",
+        "line": 19
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 2,
+          "depth": 2,
+          "className": "Box",
+          "methodName": "<init>",
+          "locals": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 14,
+      "eventKind": "step",
+      "location": {
+        "className": "experiment",
+        "methodName": "main",
+        "line": 5
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 15,
+      "eventKind": "step",
+      "location": {
+        "className": "experiment",
+        "methodName": "main",
+        "line": 6
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            },
+            "b2": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 16,
+      "eventKind": "methodEntry",
+      "location": {
+        "className": "Box",
+        "methodName": "<init>",
+        "line": 16
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            },
+            "b2": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 3,
+          "depth": 2,
+          "className": "Box",
+          "methodName": "<init>",
+          "locals": {
+            "v": {
+              "kind": "value",
+              "value": "30"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 56
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "56": {
+          "id": 56,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "0"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 17,
+      "eventKind": "step",
+      "location": {
+        "className": "Box",
+        "methodName": "<init>",
+        "line": 17
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            },
+            "b2": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 3,
+          "depth": 2,
+          "className": "Box",
+          "methodName": "<init>",
+          "locals": {
+            "v": {
+              "kind": "value",
+              "value": "30"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 56
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "56": {
+          "id": 56,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "0"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 18,
+      "eventKind": "step",
+      "location": {
+        "className": "Box",
+        "methodName": "<init>",
+        "line": 18
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            },
+            "b2": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 3,
+          "depth": 2,
+          "className": "Box",
+          "methodName": "<init>",
+          "locals": {
+            "v": {
+              "kind": "value",
+              "value": "30"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 56
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "56": {
+          "id": 56,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "30"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 19,
+      "eventKind": "step",
+      "location": {
+        "className": "Box",
+        "methodName": "<init>",
+        "line": 19
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            },
+            "b2": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 3,
+          "depth": 2,
+          "className": "Box",
+          "methodName": "<init>",
+          "locals": {
+            "v": {
+              "kind": "value",
+              "value": "30"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 56
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "56": {
+          "id": 56,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "30"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 22,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "Box",
+        "methodName": "<init>",
+        "line": 19
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            },
+            "b2": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            }
+          },
+          "retval": null
+        },
+        {
+          "frameId": 3,
+          "depth": 2,
+          "className": "Box",
+          "methodName": "<init>",
+          "locals": {
+            "v": {
+              "kind": "value",
+              "value": "30"
+            },
+            "this": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 56
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "56": {
+          "id": 56,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "30"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 21,
+      "eventKind": "step",
+      "location": {
+        "className": "experiment",
+        "methodName": "main",
+        "line": 6
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            },
+            "b2": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "56": {
+          "id": 56,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "30"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 22,
+      "eventKind": "step",
+      "location": {
+        "className": "experiment",
+        "methodName": "main",
+        "line": 7
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            },
+            "b2": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            },
+            "b3": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 56
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "56": {
+          "id": 56,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "30"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 23,
+      "eventKind": "step",
+      "location": {
+        "className": "experiment",
+        "methodName": "main",
+        "line": 8
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            },
+            "b2": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            },
+            "b3": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 56
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "56": {
+          "id": 56,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "30"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 24,
+      "eventKind": "step",
+      "location": {
+        "className": "experiment",
+        "methodName": "main",
+        "line": 9
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            },
+            "b2": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 56
+            },
+            "b3": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 56
+            }
+          },
+          "retval": null
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "56": {
+          "id": 56,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "30"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    },
+    {
+      "eventIndex": 27,
+      "eventKind": "methodExit",
+      "location": {
+        "className": "experiment",
+        "methodName": "main",
+        "line": 9
+      },
+      "frames": [
+        {
+          "frameId": 0,
+          "depth": 1,
+          "className": "experiment",
+          "methodName": "main",
+          "locals": {
+            "a": {
+              "kind": "reference",
+              "type": "int[]",
+              "id": 50
+            },
+            "b1": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 53
+            },
+            "b2": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 56
+            },
+            "b3": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 56
+            }
+          },
+          "retval": {
+            "kind": "void"
+          }
+        }
+      ],
+      "heap": {
+        "50": {
+          "id": 50,
+          "type": "int[]",
+          "objectKind": "array",
+          "elements": [
+            {
+              "kind": "value",
+              "value": "10"
+            },
+            {
+              "kind": "value",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "value": "30"
+            }
+          ]
+        },
+        "53": {
+          "id": 53,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "10"
+            },
+            "b": {
+              "kind": "reference",
+              "type": "Box",
+              "id": 55
+            }
+          }
+        },
+        "55": {
+          "id": 55,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "20"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        },
+        "56": {
+          "id": 56,
+          "type": "Box",
+          "objectKind": "object",
+          "fields": {
+            "v": {
+              "kind": "value",
+              "value": "30"
+            },
+            "b": {
+              "kind": "null"
+            }
+          }
+        }
+      },
+      "stdout": "",
+      "exception": null
+    }
+  ]
+}
